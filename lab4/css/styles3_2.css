@@ -1,0 +1,19 @@
+body{
+    border: 1px solid blue;
+    margin: 20px;
+    padding: 10px;
+}
+main{
+    text-align: center;
+}
+#recipe{
+    color: red;
+}
+.products, samp{
+    font-style: italic;
+}
+
+hr{
+    border: 3px solid green;
+    width: 50%;
+}  
