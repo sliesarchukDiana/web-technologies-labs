@@ -2,13 +2,18 @@ a {
     color: purple;
 }
 
+.menu-list {
+    color: green;
+}
+
+ol li {
+    list-style-position: inside;
+}
+
 ul>li>ul {
     list-style: none;
 }
 
-.main_list {
-    color: green;
-}
 
 .berries {
     list-style-type: square;
@@ -20,8 +25,4 @@ ul>li>ul {
 
 .berries a {
     text-decoration: none;
-}
-
-ol li {
-    list-style-position: inside;
 }

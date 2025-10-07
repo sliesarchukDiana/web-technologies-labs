@@ -1,43 +1,44 @@
-*{
+* {
     font-size: 20px;
     font-family: Arial;
     line-height: 40px;
 }
-p{
+
+p {
     color: green;
     text-align: center;
 }
 
-div{
+div {
     text-align: justify;
 }
 
-.red_p{
+.red_p {
     color: red;
 }
 
-.no_wrap{
+.no_wrap {
     white-space: nowrap;
 }
 
-#bold_p{
+#bold_p {
     font-weight: bold;
     font-style: italic;
 
 }
 
-.with_shadow{
+.with_shadow {
     text-shadow: 5px -5px 3px red;
 }
 
 
-.uppercase{
+.uppercase {
     text-decoration: line-through;
     text-transform: uppercase;
     text-indent: 50px;
 }
 
-.wide{
+.wide {
     letter-spacing: 30px;
     word-spacing: 50px;
 }
