@@ -8,50 +8,40 @@
 </head>
 
 <body>
-    <center>
-        <h1>Заповніть цю форму:</h1>
-        <!-- <form action="" method="post" enctype="multipart/form-data"></form> -->
-        <form id="mainForm" action="" method="get" tabindex="1">
-            <fieldset>
-                <legend>Особисті дані</legend>
+    <h1>Заповніть цю форму:</h1>
+    <!-- <form action="" method="post" enctype="multipart/form-data"></form> -->
+    <form id="mainForm" action="" method="get" tabindex="1">
+        <fieldset>
+            <legend>Особисті дані</legend>
+            <div>
                 <label for="fullname">Повне ім'я</label>
-                <br>
                 <input id="fullname" name="fullname" type="text" placeholder="Іван Іваненко" required tabindex="2" />
-                <br>
-                <br>
-                <label for="about">Коротко про себе</label>
-                <br>
+            </div>
+            <label for="about">Коротко про себе</label>
+            <div>
                 <textarea id="about" name="about" placeholder="Кілька слів про вас" tabindex="3"></textarea>
-                <br>
-                <br>
-
+            </div>
+            <div>
                 <label for="password">Пароль</label>
-                <br>
                 <input id="password" name="password" type="password" placeholder="Пароль" required
                     pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[^A-Za-z0-9]).{6,}$" tabindex="4" />
-
-                <br>
-                <br>
-
+            </div>
+            <div>
                 <label for="email">Електронна пошта</label>
-                <br>
                 <input id="email" name="email" type="email" placeholder="user@example.com" required autocomplete="off"
                     pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" tabindex="5" />
-                <br>
-                <br>
+            </div>
+            <div>
                 <label for="phone">Мобільний номер</label>
-                <br>
                 <input id="phone" name="phone" type="tel" placeholder="+380501234567" required pattern="^\+?\d{9,15}$"
                     tabindex="6" />
-                <br>
-                <br>
+            </div>
+            <div>
                 <label for="birthdate">Дата народження</label>
-                <br>
                 <input id="birthdate" name="birthdate" type="date" required tabindex="7" />
-                <br>
-                <br>
+            </div>
+            <div>
                 <label for="city">Місто, в якому ви проживаєте на даний момент:</label>
-                <br>
                 <input id="city" name="city" list="cities" placeholder="Введіть або оберіть місто" tabindex="21" />
                 <datalist id="cities">
                     <option value="Київ"></option>
@@ -62,68 +52,66 @@
                     <option value="Чернівці"></option>
                     <option value="Івано-Франківськ"></option>
                 </datalist>
+            </div>
+        </fieldset>
+
+
+
+
+        <fieldset>
+            <legend>Навички</legend>
+            <div>
+                <p>Ви легко адаптуєтесь у новому колективі?</p>
+                <label><input type="radio" name="relocate" value="no" tabindex="11" /> Ні</label>
+                <label><input type="radio" name="relocate" value="maybe" tabindex="12" /> Можливо</label>
+                <label><input type="radio" name="relocate" value="yes" checked tabindex="13" /> Так</label>
+            </div>
+
+            <div>
+                <p>Якими мовами програмування ви володієте?</p>
+                <label><input type="checkbox" name="python" value="python" tabindex="14" />Python </label>
+                <label><input type="checkbox" name="javascript" value="javascript" checked tabindex="15" />JavaScript
+                </label>
+                <label><input type="checkbox" name="java" value="java" tabindex="16" />Java </label>
+                <label><input type="checkbox" name="csharp" value="csharp" tabindex="17" />C# </label>
+                <label> <input type="checkbox" name="cpp" value="cpp" tabindex="18" />C++</label>
+                <label><input type="checkbox" name="php" value="php" tabindex="19" /> PHP</label>
+                <input type="checkbox" name="other_lang" value="other_lang" tabindex="20" /> Інше</label>
+            </div>
+            <br>
+
+            <div>
+                <label for="level">Ваш рівень англійської мови?</label>
                 <br>
                 <br>
-            </fieldset>
+                <select name="level" id="level" tabindex="21">
+                    <option value="a1">A1 Beginner</option>
+                    <option value="a2">A2 Elementary</option>
+                    <option value="b1" selected>B1 Intermediate</option>
+                    <option value="b2">B2 Upper-Intermediate</option>
+                    <option value="c1">C1 Advanced</option>
+                    <option value="c2">C2 Proficiency</option>
+                </select>
+            </div>
+            <br>
 
-
-
-
-            <fieldset>
-                <legend>Навички</legend>
-                <div>
-                    <p>Ви легко адаптуєтесь у новому колективі?</p>
-                    <label><input type="radio" name="relocate" value="no" tabindex="11" /> Ні</label>
-                    <label><input type="radio" name="relocate" value="maybe" tabindex="12" /> Можливо</label>
-                    <label><input type="radio" name="relocate" value="yes" checked tabindex="13" /> Так</label>
-                </div>
-
-                <div>
-                    <p>Якими мовами програмування ви володієте?</p>
-                    <label><input type="checkbox" name="python" value="python" tabindex="14" />Python </label>
-                    <label><input type="checkbox" name="javascript" value="javascript" checked
-                            tabindex="15" />JavaScript </label>
-                    <label><input type="checkbox" name="java" value="java" tabindex="16" />Java </label>
-                    <label><input type="checkbox" name="csharp" value="csharp" tabindex="17" />C# </label>
-                    <label> <input type="checkbox" name="cpp" value="cpp" tabindex="18" />C++</label>
-                    <label><input type="checkbox" name="php" value="php" tabindex="19" /> PHP</label>
-                    <input type="checkbox" name="other_lang" value="other_lang" tabindex="20" /> Інше</label>
-                </div>
+        </fieldset>
+        <fieldset>
+            <legend>Про вас!</legend>
+            <div>
+                <p>Чим ви цікавитесь?</p>
+                <label><input type="radio" name="hobby" value="reading" tabindex="8" /> Читання</label>
                 <br>
-
-                <div>
-                    <label for="level">Ваш рівень англійської мови?</label>
-                    <br>
-                    <br>
-                    <select name="level" id="level" tabindex="21">
-                        <option value="a1">A1 Beginner</option>
-                        <option value="a2">A2 Elementary</option>
-                        <option value="b1" selected>B1 Intermediate</option>
-                        <option value="b2">B2 Upper-Intermediate</option>
-                        <option value="c1">C1 Advanced</option>
-                        <option value="c2">C2 Proficiency</option>
-                    </select>
-                </div>
+                <label><input type="radio" name="hobby" value="sports" tabindex="9" /> Спорт</label>
                 <br>
-
-            </fieldset>
-            <fieldset>
-                <legend>Про вас!</legend>
-                <div>
-                    <p>Чим ви цікавитесь?</p>
-                    <label><input type="radio" name="hobby" value="reading" tabindex="8" /> Читання</label>
-                    <br>
-                    <label><input type="radio" name="hobby" value="sports" tabindex="9" /> Спорт</label>
-                    <br>
-                    <label><input type="radio" name="hobby" value="music" tabindex="10" /> Музика</label>
-                    <br>
-                    <label><input type="radio" name="hobby" value="art" tabindex="9" /> Малювання</label>
-                    <br>
-                    <label><input type="radio" name="hobby" value="other" tabindex="10" /> Інше</label>
-                </div>
+                <label><input type="radio" name="hobby" value="music" tabindex="10" /> Музика</label>
                 <br>
+                <label><input type="radio" name="hobby" value="art" tabindex="9" /> Малювання</label>
+                <br>
+                <label><input type="radio" name="hobby" value="other" tabindex="10" /> Інше</label>
+            </div>
+            <div>
                 <label for="zodiac">Який ваш знак зодіаку?</label>
-                <br>
                 <select id="zodiac" name="zodiac" tabindex="22">
                     <optgroup label="Вогняні знаки">
                         <option value="a1">Овен</option>
@@ -146,10 +134,9 @@
                         <option value="d3">Козоріг</option>
                     </optgroup>
                 </select>
-                <br>
-                <br>
+            </div>
+            <div>
                 <label for="color">Який ваш улюблений колір?</label>
-                <br>
                 <select name="color" id="color" tabindex="23" multiple>
                     <option value="red">Червоний</option>
                     <option value="orange">Жовтогарячий</option>
@@ -164,23 +151,20 @@
                     <option value="gray">Сірий</option>
                     <option value="white">Білий</option>
                 </select>
-            </fieldset>
-
-            <fieldset>
-                <legend>Файли та керування формою</legend>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Файли та керування формою</legend>
+            <div>
                 <label for="audioFiles">Завантажити аудіофайли</label>
                 <input id="audioFiles" name="audioFiles" type="file" accept="audio/*" multiple tabindex="24" />
-                <br>
-                <br>
-                <div>
-                    <button type="reset" tabindex="25">Скинути</button>
-                    <button type="submit" tabindex="26">Відправити</button>
-                </div>
-
-            </fieldset>
-
-        </form>
-    </center>
+            </div>
+            <div>
+                <button type="reset" tabindex="25">Скинути</button>
+                <button type="submit" tabindex="26">Відправити</button>
+            </div>
+        </fieldset>
+    </form>
 </body>
 <a href="../index.html"><--Повернутись на головну</a>
 
