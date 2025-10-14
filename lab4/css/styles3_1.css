@@ -13,7 +13,7 @@ div {
     text-align: justify;
 }
 
-.red_p {
+.colored {
     color: red;
 }
 
@@ -27,7 +27,7 @@ div {
 
 }
 
-.with_shadow {
+.shadow {
     text-shadow: 5px -5px 3px red;
 }
 
