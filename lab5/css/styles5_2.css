@@ -1,19 +1,24 @@
 table {
     border-collapse: collapse;
-    border: 1px solid #ffffff;
     font-size: 20px;
 }
 
 td {
     width: 150px;
     text-align: center;
+    padding: 25px 20px;
 }
 
 thead td {
+    border: transparent;
     color: #ffff;
-    padding: 20px;
     background: rgb(242, 221, 221);
     font-weight: bold;
+}
+
+tbody td {
+    font-size: 20px;
+    border: 2px solid #ffffff;
 }
 
 thead td:nth-child(2) {
@@ -30,11 +35,6 @@ thead td:nth-child(4) {
 
 thead td:nth-child(5) {
     background: rgb(99, 36, 35);
-}
-
-tbody td {
-    padding: 30px;
-    font-size: 20px;
 }
 
 tbody td:nth-child(1) {
