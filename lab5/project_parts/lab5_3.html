@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Task3</title>
+    <link rel="stylesheet" href="../css/styles5_3.css">
+</head>
+
+<body>
+    <h1>Заповніть цю форму:</h1>
+    <form id="mainForm" action="" method="get" tabindex="1">
+        <fieldset>
+            <legend>Особисті дані</legend>
+            <div>
+                <label for="fullname">Повне ім'я</label>
+                <input id="fullname" name="fullname" type="text" placeholder="Іван Іваненко" required tabindex="2" />
+            </div>
+            <div>
+                <label for="about">Коротко про себе</label>
+                <textarea id="about" name="about" placeholder="Кілька слів про вас" tabindex="3"></textarea>
+            </div>
+            <div>
+                <label for="password">Пароль</label>
+                <input id="password" name="password" type="password" placeholder="Пароль" required
+                    pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[^A-Za-z0-9]).{6,}$" tabindex="4" />
+            </div>
+            <div>
+                <label for="email">Електронна пошта</label>
+                <input id="email" name="email" type="email" placeholder="user@example.com" required autocomplete="off"
+                    pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" tabindex="5" />
+            </div>
+            <div>
+                <label for="phone">Мобільний номер</label>
+                <input id="phone" name="phone" type="tel" placeholder="+380501234567" required pattern="^\+?\d{9,15}$"
+                    tabindex="6" />
+            </div>
+            <div>
+                <label for="birthdate">Дата народження</label>
+                <input id="birthdate" name="birthdate" type="date" required tabindex="7" />
+            </div>
+            <div>
+                <label for="city">Місто, в якому ви проживаєте на даний момент:</label>
+                <input id="city" name="city" list="cities" placeholder="Введіть або оберіть місто" tabindex="21" />
+                <datalist id="cities">
+                    <option value="Київ"></option>
+                    <option value="Львів"></option>
+                    <option value="Одеса"></option>
+                    <option value="Харків"></option>
+                    <option value="Дніпро"></option>
+                    <option value="Чернівці"></option>
+                    <option value="Івано-Франківськ"></option>
+                </datalist>
+            </div>
+        </fieldset>
+
+
+
+
+        <fieldset>
+            <legend>Навички</legend>
+            <div>
+                <p>Ви легко адаптуєтесь у новому колективі?</p>
+                <label><input type="radio" name="relocate" value="no" tabindex="11" /> Ні</label>
+                <label><input type="radio" name="relocate" value="maybe" tabindex="12" /> Можливо</label>
+                <label><input type="radio" name="relocate" value="yes" checked tabindex="13" /> Так</label>
+            </div>
+            <div class="program-lang-skill">
+                <p>Якими мовами програмування ви володієте?</p>
+                <label><input type="checkbox" name="python" value="python" tabindex="14" />Python </label>
+                <label><input type="checkbox" name="javascript" value="javascript" checked tabindex="15" />JavaScript
+                </label>
+                <label><input type="checkbox" name="java" value="java" tabindex="16" />Java </label>
+                <label><input type="checkbox" name="csharp" value="csharp" tabindex="17" />C# </label>
+                <label> <input type="checkbox" name="cpp" value="cpp" tabindex="18" />C++</label>
+                <label><input type="checkbox" name="php" value="php" tabindex="19" />PHP</label>
+                <label><input type="checkbox" name="other_lang" value="other_lang" tabindex="20" />Інше</label>
+            </div>
+
+            <div>
+                <label for="level">Ваш рівень англійської мови?</label>
+                <select name="level" id="level" tabindex="21">
+                    <option value="a1">A1 Beginner</option>
+                    <option value="a2">A2 Elementary</option>
+                    <option value="b1" selected>B1 Intermediate</option>
+                    <option value="b2">B2 Upper-Intermediate</option>
+                    <option value="c1">C1 Advanced</option>
+                    <option value="c2">C2 Proficiency</option>
+                </select>
+            </div>
+
+        </fieldset>
+        <fieldset>
+            <legend>Про вас!</legend>
+            <div class="hobbies">
+                <p>Чим ви цікавитесь?</p>
+                <label><input type="radio" name="hobby" value="reading" tabindex="8" /> Читання</label>
+                <label><input type="radio" name="hobby" value="sports" tabindex="9" /> Спорт</label>
+                <label><input type="radio" name="hobby" value="music" tabindex="10" /> Музика</label>
+                <label><input type="radio" name="hobby" value="art" tabindex="9" /> Малювання</label>
+                <label><input type="radio" name="hobby" value="other" tabindex="10" /> Інше</label>
+            </div>
+            <div class="zodiac-sign">
+                <label for="zodiac">Який ваш знак зодіаку?</label>
+                <select id="zodiac" name="zodiac" tabindex="22">
+                    <optgroup label="Вогняні знаки">
+                        <option value="a1">Овен</option>
+                        <option value="a2">Лев</option>
+                        <option value="a3">Стрілець</option>
+                    </optgroup>
+                    <optgroup label="Водні знаки">
+                        <option value="b1">Рак</option>
+                        <option value="b2">Скорпіон</option>
+                        <option value="b3">Риби</option>
+                    </optgroup>
+                    <optgroup label="Повітряні знаки">
+                        <option value="c1">Близнята</option>
+                        <option value="c2">Терези</option>
+                        <option value="c3">Водолій</option>
+                    </optgroup>
+                    <optgroup label="Земні знаки">
+                        <option value="d1">Телець</option>
+                        <option value="d2">Діва</option>
+                        <option value="d3">Козоріг</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div>
+                <label for="color">Який ваш улюблений колір?</label>
+                <select name="color" id="color" tabindex="23" multiple>
+                    <option value="red">Червоний</option>
+                    <option value="orange">Жовтогарячий</option>
+                    <option value="yellow">Жовтий</option>
+                    <option value="green">Зелений</option>
+                    <option value="cyan">Бірюзовий</option>
+                    <option value="blue">Голубий</option>
+                    <option value="ultramarine">Синій</option>
+                    <option value="purple">Фіолетовий</option>
+                    <option value="pink">Рожевий</option>
+                    <option value="black">Чорний</option>
+                    <option value="gray">Сірий</option>
+                    <option value="white">Білий</option>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Файли та керування формою</legend>
+            <div>
+                <label for="audioFiles">Завантажити аудіофайли</label>
+                <input id="audioFiles" name="audioFiles" type="file" accept="audio/*" multiple tabindex="24" />
+            </div>
+            <div>
+                <button type="reset" tabindex="25">Скинути</button>
+                <button type="submit" tabindex="26">Відправити</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+<a href="../index.html"><--Повернутись на головну</a>
+
+</html>

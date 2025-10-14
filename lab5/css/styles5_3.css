@@ -1,0 +1,79 @@
+body {
+    color: #2D003B;
+    padding: 5px 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: linear-gradient(to right top, #c95dff, #e8bbff, #fcb5e8, #ffb3d0, #ffb5bb, #ffb9ab, #ffbea1, #ffc597, #ffcd8e, #ffd685, #ffe17d, #ffec76, #f9f871);
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+legend {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+fieldset {
+    border-radius: 20px;
+    border: 2px solid #A444D4;
+    background: #b167d666;
+    width: 75%;
+    margin-bottom: 10px;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 40px;
+    font-weight: bold;
+    color: #ffdae8;
+    margin: 0 10px;
+    padding: 10px 15px;
+    border: transparent;
+    background: #5100767a;
+}
+
+.hobbies label {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: first baseline;
+}
+
+.program-lang-skill label {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+#fullname,
+#about,
+#password,
+#email,
+#phone,
+#birthdate,
+#city {
+    font-weight: bold;
+    color: #2D003B;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: transparent;
+    background: #f3daff7a;
+    margin: 10px 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#zodiac,
+#level,
+#color {
+    font-weight: bold;
+    color: #ffdae8;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: transparent;
+    background: #5100767a;
+    display: block;
+    margin: 10px 0;
+}
