@@ -37,7 +37,7 @@ thead td:nth-child(5) {
     background: rgb(99, 36, 35);
 }
 
-tbody td:nth-child(1) {
+tbody td:first-child {
     color: #ffff;
     font-size: 25px;
     background: rgb(192, 80, 77);
