@@ -31,7 +31,14 @@ button {
     margin: 0 10px;
     padding: 10px 15px;
     border: transparent;
-    background: #5100767a;
+}
+
+.reset-btn {
+    background: #A444D4;
+}
+
+.submit-btn {
+    background: #8700cb;
 }
 
 .hobbies label {
