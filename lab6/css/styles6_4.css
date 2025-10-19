@@ -1,0 +1,102 @@
+.wrapper {
+    box-sizing: border-box;
+    width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial;
+}
+
+header {
+    text-align: start;
+}
+
+.logo-hyperlink {
+    width: 50px;
+}
+
+.horizontal-menu {
+    float: inline-end;
+    list-style-type: none;
+    margin: 0;
+}
+
+li {
+    margin: 10px;
+    float: left;
+}
+
+li a {
+    color: #583079;
+    font-weight: bold;
+    padding: 10px;
+    background: #ff7f50;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    margin: 5px 0;
+    z-index: -1;
+    position: relative
+}
+
+.shadow-item p,
+strong {
+    margin: 0 10px;
+}
+
+.shadow-item {
+    padding: 15px 0 5px 0;
+    text-align: start;
+    display: inline-block;
+    margin: 40px;
+    border: 1px solid green;
+    box-sizing: border-box;
+    width: 250px;
+    height: 300px;
+}
+
+.top-left-shadow {
+    box-shadow: -10px -10px 5px green;
+}
+
+.full-shadow {
+    box-shadow: 0 0 10px 10px green;
+}
+
+.right-bottom-shadow {
+    box-shadow: 0.4em 0.4em 5px rgba(0, 128, 0, 0.5);
+}
+
+.faint-full-shadow {
+    box-shadow: 0 0 50px 2px green;
+}
+
+.multicoloured-shadow {
+    box-shadow: inset 5px 0 red, inset 0 5px green, inset -5px 0 blue, inset 0 -5px darkorange;
+}
+
+.duocolored-shadow {
+    position: relative;
+}
+
+.duocolored-shadow::before,
+.duocolored-shadow::after {
+    content: '';
+    position: absolute;
+    left: 2%;
+    right: 2%;
+    height: 100%;
+    z-index: -1;
+}
+
+.duocolored-shadow::before {
+    bottom: 0;
+    box-shadow: 0 5px 0 green;
+}
+
+.duocolored-shadow::after {
+    top: 0;
+    box-shadow: 0 -5px 0 darkorange;
+}
