@@ -52,6 +52,8 @@ button {
     display: flex;
 }
 
+/* replace ID to classes for fields */
+
 #fullname,
 #about,
 #password,
