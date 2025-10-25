@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+}
+
+.box {
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    width: 300px;
+    padding: 20px;
+}
+
+.large-item {
+    color: #ffff;
+    background: #548dd4;
+    height: 460px;
+}
+
+.middle-item {
+    background: #00b050;
+    position: absolute;
+    height: 230px;
+    top: 230px;
+    left: 300px;
+    z-index: -1;
+}
+
+.small-item {
+    height: 115px;
+    background: #92cddc;
+    position: absolute;
+    top: 345px;
+    left: 600px;
+}
