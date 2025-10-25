@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+}
+
+.hover-box {
+    border: 1px solid #000000;
+    margin: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 25px;
+    background: #00b050;
+    width: 300px;
+    height: 75px;
+}
+
+.popup-box {
+    position: absolute;
+    top: 0;
+    padding: 15px;
+    border: 1px solid #000000;
+    margin: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 25px;
+    background: #548dd4;
+    color: #ffffff;
+    width: 400px;
+    visibility: hidden;
+}
+
+.first-popup {
+    left: 340px;
+}
+
+.second-popup {
+    left: 760px;
+}
+
+.first-hover:hover + .first-popup{
+    visibility: visible;
+}
+
+.second-hover:hover + .second-popup{
+    visibility: visible;
+}
