@@ -1,0 +1,80 @@
+h1 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.vidget {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    background: #b5b5b5;
+    width: 570px;
+    min-height: 425px;
+    padding: 5px 5px 5px 30px;
+}
+
+.coloured-box {
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    width: 300px;
+    height: 325px;
+    background: #000;
+    color: #b5b5b5;
+    margin: 5px 20px 30px 40px;
+    font-size: 50px;
+    padding: 200px 10px 10px 15px;
+    box-shadow: 9px 9px 30px #434343;
+}
+
+.cloud-img {
+    position: absolute;
+    top: 90px;
+    left: 100px;
+    width: 300px;
+}
+
+.week-forecast {
+    z-index: 1;
+    position: absolute;
+    top: 280px;
+    left: 300px;
+    padding: 50px 10px 10px 10px;
+    width: fit-content;
+    background: #c1c1c1;
+    box-shadow: 7px 7px #8b8b8b;
+}
+
+.week-item {
+    margin: 15px;
+    display: inline-block;
+}
+
+.week-day {
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #828282;
+}
+
+.temp-expect {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.arrows {
+    z-index: 3;
+    left: 110px;
+    top: 100px;
+    position: absolute;
+}
+
+.arrow-back,
+.arrow-forward {
+    float: left;
+    width: 60px;
+    height: 60px;
+    background: #49494999;
+}
+ img{
+    width: 100%;
+ }
