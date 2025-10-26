@@ -50,13 +50,13 @@ button {
 .login,
 .password-box,
 .first-name {
-    float: inline-start;
+    float: left;
 }
 
 .email,
 .repeat-password-box,
 .last-name {
-    float: inline-end;
+    float: right;
 }
 
 .fields {
