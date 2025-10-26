@@ -199,3 +199,15 @@ textarea::first-line {
     width: 400px;
     left: 13%;
 }
+
+.submit-btn::after {
+    content: url(../icons/check.svg);
+    position: absolute;
+    right: 10px;
+    top: 13%;
+    opacity: 0;
+}
+
+.submit-btn:active::after {
+    opacity: 1;
+}
