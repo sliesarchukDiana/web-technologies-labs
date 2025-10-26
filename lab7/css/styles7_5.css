@@ -6,7 +6,7 @@ h1 {
 .vidget {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0 auto;
+    margin: 0 160px;
     background: #b5b5b5;
     width: 570px;
     min-height: 425px;
@@ -38,7 +38,7 @@ h1 {
     z-index: 1;
     position: absolute;
     top: 280px;
-    left: 300px;
+    left: 340px;
     padding: 50px 10px 10px 10px;
     width: fit-content;
     background: #c1c1c1;
