@@ -8,7 +8,8 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 160px;
     background: #b5b5b5;
-    width: 570px;
+    width: 550px;
+    max-height: 425px;
     min-height: 425px;
     padding: 5px 5px 5px 30px;
 }
@@ -28,17 +29,17 @@ h1 {
 }
 
 .cloud-img {
-    position: absolute;
-    top: 90px;
+    position: relative;
+    top: -250px;
     left: 100px;
     width: 300px;
 }
 
 .week-forecast {
     z-index: 1;
-    position: absolute;
-    top: 280px;
-    left: 340px;
+    position: relative;
+    top: -90px;
+    left: 140px;
     padding: 50px 10px 10px 10px;
     width: fit-content;
     background: #c1c1c1;
@@ -62,10 +63,10 @@ h1 {
 }
 
 .arrows {
+    position: relative;
     z-index: 3;
-    left: 110px;
-    top: 100px;
-    position: absolute;
+    left: -20px;
+    top: -400px;
 }
 
 .arrow-back,
@@ -75,6 +76,23 @@ h1 {
     height: 60px;
     background: #49494999;
 }
- img{
+
+img {
     width: 100%;
- }
+}
+
+button {
+    border: none;
+}
+
+button:hover {
+    background: #ea767699;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
