@@ -21,6 +21,8 @@ textarea {
     border-radius: 10px;
     opacity: 0.6;
     border: none;
+    border-bottom: 4px solid #00ffea00;
+    transition: box-shadow 0.2s;
 }
 
 textarea {
@@ -80,23 +82,27 @@ button {
     clear: both;
 }
 
+
+input:hover,
+input:focus,
+.password:hover,
+.password:focus {
+    box-shadow: 0 4px 0 #fff;
+}
+
 input:hover {
-    padding-bottom: 4px;
     color: #fbff00;
 }
 
 input:focus {
-    padding-bottom: 4px;
     color: #ffa600;
 }
 
 .password:hover {
-    padding-bottom: 4px;
     color: #1eff00;
 }
 
 .password:focus {
-    padding-bottom: 4px;
     color: #00ffea;
 }
 
