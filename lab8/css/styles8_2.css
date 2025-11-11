@@ -1,9 +1,23 @@
+:root {
+    --color-text-main: #545454;
+    --color-text-muted: #808080;
+    --color-text-light: #fff;
+    --color-bg-light: #f0f4f5;
+    --color-bg-dark: #29292c;
+    --color-accent: #ff5f60;
+    --color-gray-light: #cdcdcd;
+    --color-black: #000;
+    --color-red: red;
+    --font-main: "Oswald";
+    --font-secondary: Arial, Helvetica, sans-serif;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: oswald;
-    color: #545454;
+    font-family: var(--font-main);
+    color: var(--color-text-main);
 }
 
 .container {
@@ -36,13 +50,12 @@ li {
 }
 
 li>a {
-    color: black;
+    color: var(--color-black);
     text-decoration: none;
 }
 
 .nav-favourite {
-    padding: 2px;
-    background: #ff5f60;
+    background: var(--color-accent);
     text-align: center;
     padding: 8px;
 }
@@ -52,11 +65,12 @@ li>a {
 }
 
 .promo {
-    background: #f0f4f5;
+    background: var(--color-bg-light);
     padding: 50px 0;
 }
 
-.promo-title-main {
+.promo-title-main, .portfolio-contact-offer {
+    text-transform: uppercase;
     margin-bottom: 12px;
     letter-spacing: 2px;
     font-weight: 100;
@@ -66,10 +80,10 @@ p {
     display: block;
     text-transform: none;
     margin-bottom: 5px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-secondary);
     font-weight: 200;
     font-size: 14px;
-    color: #808080;
+    color: var(--color-text-muted);
     line-height: 25px;
 }
 
@@ -97,7 +111,7 @@ h3::after {
     position: absolute;
     width: 6px;
     height: 2px;
-    background: red;
+    background: var(--color-red);
     top: 15px;
 }
 
@@ -115,8 +129,8 @@ button {
     gap: 8px;
     padding: 12px 15px;
     border: none;
-    background: #ff5f60;
-    color: #fff;
+    background: var(--color-accent);
+    color: var(--color-text-light);
     text-transform: uppercase;
     cursor: pointer;
 }
@@ -172,7 +186,6 @@ h4 {
     align-items: center;
     padding: 20px 15px;
     text-align: center;
-
 }
 
 .intensive-round {
@@ -182,7 +195,7 @@ h4 {
     width: 100px;
     height: 100px;
     border-radius: 100px;
-    background: #f0f4f5;
+    background: var(--color-bg-light);
 }
 
 .intensive-desc p {
@@ -205,10 +218,10 @@ h4 {
 }
 
 .cases-date {
-    font-family: Oswald;
+    font-family: var(--font-main);
     font-weight: 400;
     text-transform: uppercase;
-    color: #cdcdcd;
+    color: var(--color-gray-light);
     word-spacing: 5px;
 }
 
@@ -231,15 +244,11 @@ h5 {
 }
 
 footer {
-    background: #29292c;
+    background: var(--color-bg-dark);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 75px 0;
-}
-
-.media img {
-    width: 30px;
 }
 
 .media {
@@ -247,4 +256,8 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 10px;
+}
+
+.media img {
+    width: 30px;
 }
