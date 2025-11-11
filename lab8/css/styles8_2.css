@@ -54,7 +54,7 @@ nav {
     font-size: 12px;
 }
 
-ul {
+.primary-nav {
     display: flex;
     gap: 50px;
     align-items: center;
@@ -160,12 +160,12 @@ button img {
 .portfolio-gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 10px;
+    justify-content: center;
+    gap: 5px;
 }
 
 .portfolio-gallery img {
-    width: 372px;
+    width: 330px;
 }
 
 .portfolio-item {
@@ -200,6 +200,7 @@ h4 {
 }
 
 .intensive-item {
+    margin-bottom: 15px;
     display: flex;
     width: 264px;
     max-height: 300px;
@@ -331,4 +332,147 @@ button:active {
 .intensive-item:hover {
     background: var(--color-bg-light);
     box-shadow: 0 20px 0 0 var(--color-bg-light);
+}
+
+#menu-toggle {
+    opacity: 0;
+}
+
+.menu-btn {
+    display: none;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 11;
+}
+
+.menu-btn>span,
+.menu-btn>span::before,
+.menu-btn>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-bg-dark);
+    transition: 0.3s;
+}
+
+.menu-btn>span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu-btn>span::after {
+    content: '';
+    top: 8px;
+}
+
+.menu-box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.menu-item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: var(--font-main);
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #CFD8DC;
+}
+
+#menu-toggle:checked~.menu-btn>span {
+    transform: rotate(45deg);
+}
+
+#menu-toggle:checked~.menu-btn>span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu-toggle:checked~.menu-btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu-toggle:checked~.menu-box {
+    visibility: visible;
+    right: 0;
+}
+
+@media(max-width: 1200px) {
+
+    header {
+        padding: 0;
+    }
+
+    .main-nav {
+        gap: 20px;
+    }
+
+    .container {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: flex;
+    }
+
+    .primary-nav {
+        visibility: hidden;
+    }
+
+    .portfolio-gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cases-wrapper {
+        justify-content: center;
+    }
+}
+
+@media(max-width: 576px) {
+    .cases-wrapper {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .cases-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .cases-item img {
+        width: 100%;
+    }
+
 }
