@@ -12,6 +12,7 @@
     --bulbtipcolor: #1c1c1c;
     --bulbonshine: #d8d8d8;
     --bulbheatedcenter: #ffffff;
+    --led-brightness: 1;
 }
 
 body {
@@ -36,7 +37,7 @@ body::after {
 }
 
 body.lighton::after {
-    opacity: 1;
+    opacity: var(--led-brightness);
 }
 
 .bulb {

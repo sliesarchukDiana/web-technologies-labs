@@ -14,6 +14,10 @@
             top: 30px;
             right: 40px;
             z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 15px;
         }
         .hidden {
             display: none !important;
@@ -25,6 +29,13 @@
 <div class="btn-container">
     <button class="cta" id="switch-bulb-btn">
         <span class="hover-underline-animation"> Next Bulb </span>
+        <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 46 16">
+            <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)"></path>
+        </svg>
+    </button>
+
+    <button class="cta hidden" id="brightness-btn">
+        <span class="hover-underline-animation"> Brightness </span>
         <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 46 16">
             <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)"></path>
         </svg>
