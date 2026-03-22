@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lightbulb Toggle</title>
+    <link rel="stylesheet" href="bulb-styles.css">
+    <link rel="stylesheet" href="LEDbulb-style.css">
+    <link rel="stylesheet" href="switch.css">
+    <link rel="stylesheet" href="next-btn.css">
+
+    <style>
+        .btn-container {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            z-index: 10;
+        }
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+
+<div class="btn-container">
+    <button class="cta" id="switch-bulb-btn">
+        <span class="hover-underline-animation"> Next Bulb </span>
+        <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 46 16">
+            <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)"></path>
+        </svg>
+    </button>
+</div>
+
+<div id="standard-container" class="light-container">
+    <div class="light">
+        <div class="wire"></div>
+        <div class="bulb"></div>
+        <div class="bulb-inside"></div>
+        <div class="switchout">
+            <label class="switch"><input class="cb" type="checkbox" id="onoff"/>
+                <span class="toggle">
+                        <span class="left">off</span>
+                        <span class="right">on</span>
+                    </span>
+            </label>
+        </div>
+    </div>
+</div>
+
+<div id="led-container" class="light-container hidden">
+    <div class="LEDlight">
+        <div class="LEDwire"></div>
+        <div class="LEDbulb"></div>
+        <div class="LEDswitchout">
+            <label class="switch"><input class="cb" type="checkbox" id="LEDonoff"/>
+                <span class="toggle">
+                        <span class="left">off</span>
+                        <span class="right">on</span>
+                    </span>
+            </label>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
