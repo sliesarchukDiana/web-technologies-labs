@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time Dashboard</title>
+  <link rel="stylesheet" href="clock-style.css">
+</head>
+<body>
+
+<div class="dashboard">
+  <div class="card">
+    <h2>Digital Clock</h2>
+    <div class="clock-display">
+      <span id="clock-hours">00</span><span class="blink-colon">:</span><span id="clock-minutes">00</span><span class="blink-colon">:</span><span id="clock-seconds">00</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Countdown Timer</h2>
+    <label for="timer-input"></label><input type="datetime-local" id="timer-input" class="custom-input">
+    <button class="cta" id="start-timer-btn">
+      <span class="hover-underline-animation">Start</span>
+    </button>
+    <div id="timer-display" class="display-text">Select time...</div>
+  </div>
+
+  <div class="card calendar-card">
+    <h2>Calendar</h2>
+    <label for="calendar-month-input"></label><input type="month" id="calendar-month-input" class="custom-input">
+    <div class="calendar-header">
+      <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+    </div>
+    <div id="calendar-grid" class="calendar-grid"></div>
+  </div>
+
+  <div class="card">
+    <h2>Until Birthday</h2>
+    <label for="bday-input"></label><input type="date" id="bday-input" class="custom-input">
+    <div id="bday-display" class="display-text bday-text">Enter birth date</div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
