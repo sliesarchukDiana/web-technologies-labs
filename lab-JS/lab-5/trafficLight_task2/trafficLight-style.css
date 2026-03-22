@@ -6,6 +6,8 @@
 }
 
 :root{
+    --bglight: #d5d5d5;
+    --bglighter: #ececec;
     --trafficlightbody: #6e6e6e;
     --trafficlightbodydetails: #404040;
     --steadycoloroff: #680000;
@@ -21,7 +23,18 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background: var(--bglight);
 }
+
+.background-light{
+    position: absolute;
+    background-color: var(--bglighter);
+    width: 1300px;
+    height: 1300px;
+    border-radius: 100%;
+    z-index: -5;
+}
+
 
 .cap-top{
     position: relative;
