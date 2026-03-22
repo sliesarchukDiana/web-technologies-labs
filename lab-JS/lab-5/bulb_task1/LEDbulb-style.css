@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+body.flicker,
+body.flicker *,
+body.flicker *::before,
+body.flicker *::after {
+    transition: none !important;
+}
+
 .LEDbulb{
     position: relative;
     width: 200px;
