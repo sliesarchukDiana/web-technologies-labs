@@ -1,0 +1,125 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --trafficlightbody: #6e6e6e;
+    --trafficlightbodydetails: #404040;
+    --steadycoloroff: #680000;
+    --readycoloroff: #755000;
+    --gocoloroff: #006813;
+    --steadycoloractive: #ff0000;
+    --readycoloractive: #ffae00;
+    --gocoloractive: #00ff2a;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.cap-top{
+    position: relative;
+    left: 38px;
+    width: 30px;
+    height: 20px;
+    background-color: var(--trafficlightbody);
+    border-start-end-radius: 10px;
+    border-start-start-radius: 10px;
+}
+
+.cap-bottom{
+    position: relative;
+    left: 24px;
+    width: 60px;
+    height: 20px;
+    background-color: var(--trafficlightbodydetails);
+    border-start-end-radius: 10px;
+    border-start-start-radius: 10px;
+}
+
+.lights-flex{
+    position: relative;
+    left: -5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 24px 16px 24px;
+    background: var(--trafficlightbody);
+    border-radius: 20px;
+}
+
+.lights-item{
+    position: relative;
+    width: 64px;
+    height: 64px;
+    background: #bababa;
+    border-radius: 100%;
+    box-shadow: var(--trafficlightbodydetails) 0 -8px 0 4px;
+    transition: background-color 0.3s ease;
+
+}
+
+.traffic-lights-pole{
+    position: relative;
+    top: 0;
+    left: 40px;
+    width: 20px;
+    height: 35vh;
+    background: var(--trafficlightbodydetails);
+    z-index: -1;
+}
+
+.traffic-lights-flooring{
+    position: relative;
+    top: -22px;
+    width: 100px;
+    height: 20px;
+    background: var(--trafficlightbody);
+    border-start-end-radius: 10px;
+    border-start-start-radius: 10px;
+}
+
+.floor{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: var(--trafficlightbodydetails);
+}
+
+.steady-light{
+    background: var(--steadycoloroff);
+}
+
+.ready-light{
+    background: var(--readycoloroff);
+}
+.go-light{
+    background: var(--gocoloroff);
+}
+
+.light-label {
+    position: absolute;
+    left: 160%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.light-label.active {
+    opacity: 1;
+}
