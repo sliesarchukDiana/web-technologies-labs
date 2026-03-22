@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Store Inventory Dashboard</title>
+  <link rel="stylesheet" href="pm-style.css">
+</head>
+<body>
+
+<div class="dashboard">
+  <div class="column">
+    <div class="card">
+      <h2>Add New Product</h2>
+      <div class="form-group">
+        <label for="prod-name"></label><input type="text" id="prod-name" class="custom-input" placeholder="Product Name">
+        <label for="prod-price"></label><input type="number" id="prod-price" class="custom-input" placeholder="Price ($)">
+        <label for="prod-stock"></label><input type="number" id="prod-stock" class="custom-input" placeholder="Stock Qty">
+        <button class="cta" id="btn-add-product">
+          <span class="hover-underline-animation">Add Product</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Place Order</h2>
+      <div class="form-group">
+        <label for="customer-name"></label><input type="text" id="customer-name" class="custom-input" placeholder="Customer Name">
+        <label for="order-product-select"></label><select id="order-product-select" class="custom-input">
+          <option value="">Select Product...</option>
+        </select>
+        <label for="order-qty"></label><input type="number" id="order-qty" class="custom-input" placeholder="Quantity">
+        <button class="cta" id="btn-place-order">
+          <span class="hover-underline-animation">Submit Order</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card full-height">
+      <h2>Product Catalog (Map)</h2>
+      <div id="catalog-grid" class="catalog-grid"></div>
+    </div>
+  </div>
+
+  <div class="column log-column">
+    <div class="card full-height log-card">
+      <h2>System Log (History & Sets)</h2>
+      <div id="system-log" class="log-container"></div>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
