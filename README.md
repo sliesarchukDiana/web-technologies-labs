@@ -29,6 +29,7 @@ Contains assignments focused on interactivity and scripting.
 * 📁 `lab-2/` - *Functions and control flow]*
 * 📁 `lab-3/` - *Arrays and Objects*
 * 📁 `lab-4/` - *Arrays and Objects*
+* 📁 `lab-5/` - *setTimeout та setInterval, Map/Set. WeakMap/WeakSet*
 
 ## 🚀 How to Run Locally
 These projects are built with standard web technologies and do not require a backend server.
