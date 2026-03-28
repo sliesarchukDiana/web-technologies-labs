@@ -37,3 +37,8 @@ These projects are built with standard web technologies and do not require a bac
 1. Clone this repository:
    ```bash
    git clone https://github.com/sliesarchukDiana/web-technologies-labs.git
+
+## 👤 Author
+Diana (@sliesarchukDiana)
+If you want to buy me a coffee ☕ 
+4441111042237226
