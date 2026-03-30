@@ -150,5 +150,4 @@ document.getElementById('open-modal-btn').addEventListener('click', () => toggle
 document.getElementById('close-modal-btn').addEventListener('click', () => toggleModal());
 window.addEventListener('click', (e) => e.target === els.modal && toggleModal());
 
-// Ініціалізація
 document.addEventListener('DOMContentLoaded', updateUI);
