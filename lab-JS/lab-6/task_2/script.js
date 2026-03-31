@@ -25,9 +25,9 @@ const updateTaskText = (list, id, newText) =>
 const sortTasks = (list, sortBy) => {
     const copy = [...list];
     switch (sortBy) {
-        case 'status': return copy.sort((a, b) => Number(a.completed) - Number(b.completed)); // Невиконані (0) вище за виконані (1)
-        case 'dateCreated': return copy.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)); // Новіші вище
-        case 'dateUpdated': return copy.sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt)); // Нещодавно змінені вище
+        case 'status': return copy.sort((a, b) => Number(a.completed) - Number(b.completed));
+        case 'dateCreated': return copy.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        case 'dateUpdated': return copy.sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
         default: return copy;
     }
 };
@@ -67,7 +67,6 @@ const renderTasks = () => {
     const editInput = document.querySelector('.edit-input');
     if (editInput) {
         editInput.focus();
-        // Ставимо курсор в кінець тексту
         editInput.selectionStart = editInput.selectionEnd = editInput.value.length;
     }
 };
