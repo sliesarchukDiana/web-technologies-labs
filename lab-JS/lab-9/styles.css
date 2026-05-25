@@ -1,3 +1,18 @@
+:root {
+    --main-bg-color-light: #ffffff;
+    --main-bg-color-grey: #f4e4db;
+    --main-accent-color: #ff6a00;
+    --main-accent-color-hover: #d84c00;
+    --primary-text-color: #222;
+    --secondary-text-color: #555;
+    --inactive-text-color: #777;
+    --inactive-bg-color: #f9f9f9;
+    --inactive-bg-color-hover: #eef2f5;
+    --border-light-grey: #ddd;
+    --success-text-color: #2e7d32;
+    --success-message-bg-color: #c8e6c9;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,17 +21,16 @@
 }
 
 body {
-    background-color: #f4f7f6;
+    background-color: var(--main-bg-color-grey);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 20px;
-    color: #333;
 }
 
 .form-container {
-    background-color: #ffffff;
+    background-color: var(--main-bg-color-light);
     width: 100%;
     max-width: 500px;
     border-radius: 8px;
@@ -26,29 +40,29 @@ body {
 
 .tabs {
     display: flex;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border-light-grey);
 }
 
 .tab-btn {
     flex: 1;
     padding: 15px;
     border: none;
-    background-color: #f9f9f9;
+    background-color: var(--inactive-bg-color);
     font-size: 16px;
     font-weight: bold;
-    color: #777;
+    color: var(--inactive-text-color);
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .tab-btn:hover {
-    background-color: #eef2f5;
+    background-color: var(--inactive-bg-color-hover);
 }
 
 .tab-btn.active {
-    background-color: #ffffff;
-    color: #007bff;
-    border-bottom: 3px solid #007bff;
+    background-color: var(--main-bg-color-light);
+    color: var(--main-accent-color);
+    border-bottom: 3px solid var(--main-accent-color);
 }
 
 .form-content {
@@ -68,7 +82,7 @@ h2 {
     margin-bottom: 20px;
     font-size: 24px;
     text-align: center;
-    color: #222;
+    color: var(--primary-text-color);
 }
 
 .form-row {
@@ -90,7 +104,7 @@ label {
     margin-bottom: 5px;
     font-size: 14px;
     font-weight: 600;
-    color: #555;
+    color: var(--secondary-text-color);
 }
 
 input[type="text"],
@@ -100,7 +114,7 @@ input[type="date"],
 select {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-light-grey);
     border-radius: 4px;
     font-size: 14px;
     transition: border-color 0.3s;
@@ -109,7 +123,7 @@ select {
 input:focus,
 select:focus {
     outline: none;
-    border-color: #007bff;
+    border-color: var(--main-accent-color);
 }
 
 .input-wrapper {
@@ -162,8 +176,8 @@ select:focus {
 .submit-btn {
     width: 100%;
     padding: 12px;
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: var(--main-accent-color);
+    color: var(--main-bg-color-light);
     border: none;
     border-radius: 4px;
     font-size: 16px;
@@ -174,16 +188,15 @@ select:focus {
 }
 
 .submit-btn:hover {
-    background-color: #0056b3;
+    background-color: var(--main-accent-color-hover);
 }
 
 #global-message {
     padding: 15px;
     text-align: center;
     font-weight: bold;
-    background-color: #e8f5e9;
-    color: #2e7d32;
-    border-bottom: 1px solid #c8e6c9;
+    background-color: var(--success-message-bg-color);
+    color: var(--success-text-color);
 }
 
 

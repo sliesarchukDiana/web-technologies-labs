@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const setSuccess = (element) => {
         const formGroup = element.closest('.form-group');
         const errorDisplay = formGroup.querySelector('.error-text');
-        errorDisplay.innerText = 'Looks good!';
+        errorDisplay.innerText = 'Okay!';
         errorDisplay.style.color = 'green';
         element.style.borderColor = 'green';
     };
