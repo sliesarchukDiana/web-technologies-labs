@@ -1,0 +1,17 @@
+* {
+    text-align: center;
+}
+
+button {
+    font-family: 'Times New Roman', Times, serif;
+    background: #c1c1c1;
+    padding: 30px 40px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 150ms 150ms
+}
+
+button:hover {
+    background: #ababab;
+}

@@ -1,0 +1,404 @@
+
+@font-face {
+  font-family: "Digital-7";
+  src: url("assets/fonts/digital-7.ttf");
+}
+
+body {
+  background: #000;
+  font-family: monospace;
+  margin: 0;
+  overflow: hidden;
+}
+
+.game-menu {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 800px;
+  height: 480px;
+  background: url("assets/img/main-background.png") no-repeat center;
+  background-size: contain;
+  z-index: 2000;
+}
+
+.game-menu__title {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  font-size: 70px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  text-shadow: 4px 4px #e20f0f;
+}
+
+
+.button {
+  position: fixed;
+  left: 50%;
+  top: 70%;
+  transform: translate3d(-50%, -50%, 0);
+  padding: 15px 30px;
+  border: 4px solid #80d010;
+  border-radius: 10px;
+  background: #000;
+  outline: 0;
+  font-family: inherit;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #80d010;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #333;
+  transition: all 0.1s;
+}
+
+.button-restart, .button-next-level {
+  display: none;
+  top: 90%;
+  z-index: 1001;
+}
+
+.button:hover {
+  background: #80d010;
+  color: #000;
+}
+
+.button:active {
+  transform: translate3d(-50%, -46%, 0);
+  box-shadow: none;
+}
+
+.wrapper {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 55%;
+  transform: translate3d(-50%, -50%, 0);
+  height: 750px;
+  width: 900px;
+  box-sizing: border-box;
+}
+
+.game-screen {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  box-sizing: border-box;
+  width: 800px;
+  height: 480px;
+  overflow: hidden;
+  background: url("assets/img/bg.png") no-repeat center;
+  background-size: cover;
+  border: 4px solid #333;
+  cursor: none;
+}
+
+.crosshair {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: url("assets/img/aim.png") no-repeat center center;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.crosshair.is-shooting {
+  background: url("assets/img/aim_2.png") no-repeat center center;
+  background-size: contain;
+}
+
+.game-screen--death { animation: 4s player-death linear; }
+
+@keyframes player-death {
+  0% { box-shadow: inset 0 0 400px rgba(215, 35, 0, 0.5); }
+  100% { box-shadow: inset 0 0 100px rgba(215, 35, 0, 0.5); }
+}
+
+.message {
+  color: #fff;
+  position: absolute;
+  left: 57%;
+  top: 36%;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 1100;
+}
+
+.message--fire {
+  width: 116px;
+  height: 68px;
+  background: url("assets/img/fire-right.png") no-repeat;
+  left: 60%;
+}
+
+.message--dead, .message--win {
+  left: 50%;
+  top: 30%;
+  font-size: 30px;
+}
+
+.white-line {
+  position: absolute;
+  left: 50px;
+  top: 10%;
+  z-index: 700;
+  width: 800px;
+  border-bottom: 2px solid #fff;
+}
+
+.button-to-menu {
+  top: 80%;
+  display: block;
+}
+
+.game-panels { display: none; }
+
+.players-panel, .time-panel, .score-panel {
+  padding: 10px;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #80d010;
+}
+
+.time-panel {
+  position: absolute;
+  left: 70%;
+  top: 2px;
+  z-index: 700;
+}
+
+.time-panel__gunman, .time-panel__you {
+  font-family: "Digital-7";
+  font-size: 65px;
+}
+
+.players-panel {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 700;
+}
+
+.players-panel__you, .players-panel__gunman {
+  padding: 10px;
+  border: 2px solid #80d010;
+  border-radius: 10px;
+}
+
+.score-panel__score {
+  position: absolute;
+  left: 25%;
+  top: 85%;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 700;
+}
+
+.score-panel__level {
+  position: absolute;
+  left: 70%;
+  top: 85%;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 700;
+}
+
+.win-screen {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 800px;
+  height: 480px;
+  background: url("assets/img/win-bg.png") no-repeat center;
+  background-size: cover;
+  z-index: 2000;
+}
+
+.win-screen__title {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  font-size: 40px;
+  line-height: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  text-shadow: 4px 4px #000;
+}
+
+.gunman {
+  position: absolute;
+  z-index: 900;
+  background-image: url('assets/img/gunman.png');
+  background-repeat: no-repeat;
+  height: 64px;
+  left: 850px;
+  bottom: 80px;
+  transform: scale(4);
+  transform-origin: bottom left;
+  image-rendering: pixelated;
+  pointer-events: all;
+}
+
+.is-walking {
+  left: 340px;
+  transition: left 3s linear;
+}
+
+.is-standing, .is-ready, .is-shooting, .is-dead, .is-victory {
+  left: 340px;
+  transition: none;
+}
+
+.char-1 { height: 64px; background-position-y: 0; }
+.char-2 { height: 72px; background-position-y: -68px; }
+.char-3 { height: 80px; background-position-y: -144px; }
+.char-4 { height: 64px; background-position-y: -228px; }
+.char-5 { height: 69px; background-position-y: -296px; }
+
+.char-1.is-walking { width: 33px; animation: char1-walk 0.8s steps(3) infinite; }
+.char-1.is-standing { width: 34px; background-position-x: -99px; }
+.char-1.is-ready { width: 34px; background-position-x: -133px; }
+.char-1.is-shooting { width: 34px; background-position-x: -269px; animation: char1-shoot 0.4s steps(3) forwards; }
+.char-1.is-dead { width: 30px; background-position-x: -405px; animation: char1-death 1s step-end forwards !important; }
+.char-1.is-victory { width: 34px; background-position-x: -435px; }
+
+@keyframes char1-walk { from { background-position-x: 0; } to { background-position-x: -99px; } }
+@keyframes char1-shoot { from { background-position-x: -167px; } to { background-position-x: -269px; } }
+@keyframes char1-death {
+  0% { background-position-x: -303px; width: 34px; }
+  25% { background-position-x: -337px; width: 34px; }
+  50% { background-position-x: -371px; width: 34px; }
+  75%, 100% { background-position-x: -405px; width: 30px; }
+}
+
+.char-2.is-walking { animation: char2-standing 0.8s linear infinite; }
+.char-2.is-standing { animation: char2-standing 3s linear infinite; }
+
+.char-2.is-ready {
+  width: 28px;
+  background-position-x: -102px;
+}
+
+.char-2.is-shooting {
+  width: 24px;
+  animation: char2-shoot 0.4s linear forwards;
+}
+
+.char-2.is-dead {
+  width: 28px;
+  animation: char2-death 1s linear forwards !important;
+}
+
+.char-2.is-victory {
+  width: 28px;
+  background-position-x: -270px;
+  transition: none !important;
+  animation: none !important;
+}
+
+
+@keyframes char2-standing {
+  0%, 33.2% { background-position-x: 0; width: 32px; }
+  33.3%, 66.5% { background-position-x: -34px; width: 32px; }
+  66.6%, 100% { background-position-x: -68px; width: 32px; }
+}
+
+@keyframes char2-shoot {
+  0%, 33.2% { background-position-x: -132px; width: 24px; }
+  33.3%, 66.5% { background-position-x: -158px; width: 24px; }
+  66.6%, 100% { background-position-x: -184px; width: 24px; }
+}
+
+@keyframes char2-death {
+  0%, 49.9% { background-position-x: -210px; width: 28px; }
+  50%, 100% { background-position-x: -240px; width: 28px; }
+}
+
+.char-3.is-walking { animation: char3-standing 0.8s linear infinite; }
+.char-3.is-standing { animation: char3-standing 3s linear infinite; }
+
+.char-3.is-ready {
+  width: 28px;
+  background-position-x: -84px;
+}
+
+.char-3.is-shooting {
+  animation: char3-shoot 0.4s linear forwards;
+}
+
+.char-3.is-dead {
+  animation: char3-death 1s linear forwards !important;
+}
+
+.char-3.is-victory {
+  width: 29px;
+  background-position-x: -259px;
+  transition: none !important;
+  animation: none !important;
+}
+
+@keyframes char3-standing {
+  0%, 33.2% { background-position-x: 0; width: 26px; }
+  33.3%, 66.5% { background-position-x: -28px; width: 26px; }
+  66.6%, 100% { background-position-x: -56px; width: 26px; }
+}
+
+@keyframes char3-shoot {
+  0%, 33.2% { background-position-x: -114px; width: 28px; }
+  33.3%, 66.5% { background-position-x: -144px; width: 28px; }
+  66.6%, 100% { background-position-x: -174px; width: 29px; }
+}
+
+@keyframes char3-death {
+  0%, 49.9% { background-position-x: -205px; width: 32px; }
+  50%, 100% { background-position-x: -239px; width: 18px; }
+}
+
+.char-4.is-walking { animation: char4-standing 0.8s step-end infinite; }
+.char-4.is-standing { animation: char4-standing 3s step-end infinite; }
+.char-4.is-ready { width: 32px; background-position-x: -102px; }
+.char-4.is-shooting { width: 30px; background-position-x: -232px; animation: char4-shoot 0.4s steps(3) forwards; }
+.char-4.is-dead { width: 32px; background-position-x: -267px; animation: char4-death 1s step-end forwards !important; }
+.char-4.is-victory { width: 32px; background-position-x: -302px; }
+
+@keyframes char4-standing {
+  0% { background-position-x: 0; width: 32px; }
+  33.3% { background-position-x: -34px; width: 32px; }
+  66.6%, 100% { background-position-x: -68px; width: 32px; }
+}
+@keyframes char4-shoot { from { background-position-x: -134px; } to { background-position-x: -232px; } }
+@keyframes char4-death {
+  0% { background-position-x: -234px; width: 32px; }
+  50%, 100% { background-position-x: -267px; width: 32px; }
+}
+
+.char-5.is-walking { animation: char5-standing 0.8s step-end infinite; }
+.char-5.is-standing { animation: char5-standing 3s step-end infinite; }
+.char-5.is-ready { width: 29px; background-position-x: -102px; }
+.char-5.is-shooting { width: 31px; background-position-x: -224px; animation: char5-shoot 0.4s steps(3) forwards; }
+.char-5.is-dead { width: 22px; background-position-x: -293px; animation: char5-death 1.5s step-end forwards !important; }
+.char-5.is-victory { width: 31px; background-position-x: -317px; }
+
+@keyframes char5-standing {
+  0% { background-position-x: 0; width: 33px; }
+  33.3% { background-position-x: -34px; width: 33px; }
+  66.6%, 100% { background-position-x: -68px; width: 33px; }
+}
+@keyframes char5-shoot { from { background-position-x: -132px; } to { background-position-x: -224px; } }
+@keyframes char5-death {
+  0% { background-position-x: -225px; width: 34px; }
+  33.3% { background-position-x: -259px; width: 34px; }
+  66.6%, 100% { background-position-x: -293px; width: 22px; }
+}
